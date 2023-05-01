@@ -1,0 +1,14 @@
+.hero{
+    background-image: url('../../assets/photo-1519708227418-c8fd9a32b7a2.png');
+    height: 90vh;
+    opacity: 60%;
+    
+}
+
+.hero-title{
+    font-family: 'Satisfy', cursive;
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+   
+}
