@@ -6,15 +6,15 @@ const Chef = ({c}) => {
 
     const {img, name,experience,numbers_of_recipes,likes} = c;
     return (
-        <div className="card w-80 bg-base-100 shadow-xl">
+        <div className="card rounded-none w-96 bg-base-100 shadow-xl">
   <figure><img className=' h-80 w-full bg-green-950 ' src={img} alt="chef" /></figure>
-  <div className="card-body chef-card-body ">
-    <h2 className="card-title">Name: {name}</h2>
-    <h3>Years of experience: {experience}</h3>
-    <h3>Numbers of Recipes: {numbers_of_recipes}</h3>
+  <div className="card-body -mt-10  chef-card-body ">
+    <h1 className="text-2xl">Name: {name}</h1>
+    <h4>Years of experience: {experience}</h4>
+    <h4>Numbers of Recipes: {numbers_of_recipes}</h4>
     <h4>Likes: {likes}</h4>
     <div className="card-actions justify-center">
-      <button className="btn ">View Recipes</button>
+      <button className="btn glass btn-wide">View Recipes</button>
     </div>
   </div>
 </div>

@@ -28,7 +28,7 @@ const Home = () => {
 
                 <h1 className='text-5xl font-bold opacity-50'>Top 6 Master Chef of Bangladesh</h1>
 
-                <div className='grid lg:grid-cols-3  justify-center items-center'>
+                <div className='grid mt-16 lg:grid-cols-3 gap-14 justify-center items-center'>
 
 
                     {
