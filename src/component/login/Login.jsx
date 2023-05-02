@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Login = () => {
@@ -7,12 +7,17 @@ const Login = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
+
     // login with google
     const handleGoogle = () => {
         google()
             .then(res => {
                 console.log(res.user);
                 setError('');
+                
             })
             .catch(er => {
                 setError(er.message)
@@ -45,6 +50,7 @@ const Login = () => {
                     setError('')
                     console.log(res.user)
                     setSuccess('login successful');
+                    navigate(from, {replace: true});
                 })
                 .catch(er => {
                     setError(er.message);

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Header = () => {
+    const {logOut, user} = useContext(AuthContext);
+
+    const handleLogout = () =>{
+        logOut()
+        .then()
+        .catch(er => console.log(er.message))
+    }
     return (
         <div className='header flex flex-col gap-5  max-[600px]:mb-32 md:flex-row  items-center justify-between lg:mb-10 py-3'>
 
@@ -13,9 +21,11 @@ const Header = () => {
 
                 <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""} ><span className='px-3 font-bold text-2xl'>Blog</span></NavLink>
 
-             
+             {
+               user ? <button onClick={handleLogout} className='font-bold text-2xl'>Logout</button>
+                :
                 <Link to='/login' className='font-bold text-2xl'>Login</Link>
-                
+             }
             </div>
 
             

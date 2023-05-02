@@ -1,9 +1,11 @@
-import React, { useState, CSSProperties } from 'react';
+import React, { useState, CSSProperties, useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './ChefDetails.css';
 import RecipesDetails from '../recipeDetails/RecipesDetails';
 import { ClipLoader } from 'react-spinners';
 const ChefDetails = () => {
+
+  
     const chef = useLoaderData();
 
     let [color, setColor] = useState("#ffffff");
@@ -15,7 +17,7 @@ const ChefDetails = () => {
         <div>
 
             {/* spinner */}
-            {!chef &&
+            { !chef &&
                 <ClipLoader
                     color={color}
                     size={150}
