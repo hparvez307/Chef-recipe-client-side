@@ -3,7 +3,7 @@ import React from 'react';
 const Register = () => {
     return (
         <div>
-            <form onSubmit={handleOnSubmit}>
+            <form >
                 <input type="email" name="email" id="email" placeholder='please enter email' required />
                 <br />
                 <input type="password" name="password" id="password" placeholder='please enter password' required />
