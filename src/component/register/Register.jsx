@@ -6,6 +6,7 @@ import { AuthContext } from '../../authProvider/AuthProvider';
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
      const handleRegister = (event) => {
         event.preventDefault();
@@ -20,13 +21,16 @@ const Register = () => {
                 return;
              }
 
+            
             createUser(email,password)
              .then( res => {
                 console.log(res.user);
                 setError('');
+                setSuccess('Registration successful');
              })
              .catch(error => {
                 setError(error.message);
+                setSuccess('');
              })
            
         
@@ -63,6 +67,7 @@ const Register = () => {
 
                 <br />
                 <p className='text-red-500 text-left mt-2 ml-40'>{error}</p>
+                <p className='text-green-500 text-left mt-2 ml-40'>{success}</p>
                 <button className='btn text-xl mt-5 lg:mr-48 px-10 bg-blue-500'><input type="submit" value="Register" /></button>
             </form>
 
