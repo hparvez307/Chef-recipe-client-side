@@ -6,7 +6,7 @@ const AuthProvider = ({ children }) => {
 
 
     const [chef, setChef] = useState([]);
-     
+
 
     useEffect(() => {
         fetch('http://localhost:5000/')
