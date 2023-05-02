@@ -14,14 +14,14 @@ import ErrorPage from './component/errorPage/ErrorPage.jsx';
 
 
 
-const router =  createBrowserRouter([
+const router = createBrowserRouter([
 
   {
     path: '/',
-    element:  <App />,
+    element: <App />,
     children: [
       {
-        path:'/',
+        path: '/',
         element: <Home></Home>
       },
       {
@@ -34,11 +34,11 @@ const router =  createBrowserRouter([
       },
       {
         path: '/chef/:id',
-        element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute> ,
-        loader: ({params}) => fetch(`http://localhost:5000/${params.id}`)
+        element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/${params.id}`)
       },
       {
-        path:'/register',
+        path: '/register',
         element: <Register></Register>
       },
       {
@@ -53,8 +53,8 @@ const router =  createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </AuthProvider>
-   
+
   </React.StrictMode>,
 )

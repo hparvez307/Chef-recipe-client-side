@@ -5,12 +5,9 @@ const Blog = () => {
         <div>
             <h1 className='text-6xl mb-10  font-bold'>Blog</h1>
 
-
             <div >
-
-
+                {/* question 1 */}
                 <div className='ans p-5 rounded'>
-
                     <h1 className='text-3xl text-bold text-orange-300 my-5'>Differences between uncontrolled and controlled components</h1>
 
                     <div className="overflow-x-auto">
@@ -63,10 +60,10 @@ const Blog = () => {
                             </tbody>
                         </table>
                     </div>
-
                 </div>
 
 
+                {/* question 2 */}
                 <div className='ans mt-10 p-5 rounded'>
                     <h1 className='text-3xl text-bold text-orange-300 my-5'>How to validate React props using PropTypes</h1>
 
@@ -84,13 +81,11 @@ const Blog = () => {
                         PropTypes.object: The prop should be an object<br />
                         PropTypes.symbol: The prop should be a symbol
                     </p>
-
-
                 </div>
 
 
 
-
+                {/* question 3 */}
                 <div className='ans mt-10 p-5 rounded'>
                     <h1 className='text-3xl text-bold text-orange-300 my-5'>Differences between nodejs and express js</h1>
                     <p>
@@ -99,6 +94,7 @@ const Blog = () => {
                     <span className='text-xl text-orange-300'>Express.js</span> is a framework based on Node.js which is used for building web-application using approaches and principles of Node.js event-driven architecture.  It is used to build web-apps using approaches and principles of Node.js. Framework based on Node.js. 	It is built on Node.js.
                 </div>
 
+                {/* question 4 */}
                 <div className='ans mt-10 p-5 rounded'>
                     <h1 className='text-3xl text-bold text-orange-300 my-5'>What is a custom hook, and why will i create a custom hook?</h1>
 

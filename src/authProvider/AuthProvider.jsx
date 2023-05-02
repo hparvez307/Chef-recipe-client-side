@@ -10,42 +10,53 @@ const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true);
     const [chef, setChef] = useState([]);
-    const [user,setUser] = useState(null);
-     console.log(user);
+    const [user, setUser] = useState(null);
+    console.log(user);
+
+    // sign in with google
     const google = () => {
-        
+
         return signInWithPopup(auth, googleProvider);
     }
+
+    // sign in with github
     const github = () => {
         return signInWithPopup(auth, githubProvider);
     }
 
-    const createUser = (email, password) =>  {
-       
-         return createUserWithEmailAndPassword(auth, email, password);
-      }
-      const loginUser = (email, password) =>  {
-        
-         return signInWithEmailAndPassword(auth, email, password);
-      }
+    // sign up with email and password
+    const createUser = (email, password) => {
 
-      const logOut = () => {
-        
+        return createUserWithEmailAndPassword(auth, email, password);
+    }
+
+    // sign in with email and password
+    const loginUser = (email, password) => {
+
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+
+    // logout 
+    const logOut = () => {
+
         return signOut(auth);
-      }
+    }
 
-      useEffect(()=>{
-        const unSubscribe =  onAuthStateChanged(auth, (loggedUser) => {
+    // setup observer for user state
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (loggedUser) => {
             setUser(loggedUser);
             setLoading(false);
-              
-           })
-  
-           return () => {
-            unSubscribe();
-           };
-        },[])
 
+        })
+
+        return () => {
+            unSubscribe();
+        };
+    }, [])
+
+    // laod data for all children
     useEffect(() => {
         fetch('http://localhost:5000/')
             .then(res => res.json())
@@ -53,6 +64,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
+    // context value
     const authInfo = {
         chef,
         createUser,
@@ -63,9 +75,9 @@ const AuthProvider = ({ children }) => {
         logOut,
         loading
     }
+
     return (
         <AuthContext.Provider value={authInfo}>
-
             {children}
         </AuthContext.Provider>
     );

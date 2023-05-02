@@ -9,7 +9,6 @@ const Footer = () => {
                 <div>
                     <h1 className='text-3xl font-bold tracking-wider '>Skychef</h1>
                     <p className='my-2'>Find your favorite food from our website. <br /> Eat Healthy, Live Healthy</p>
-                    
                 </div>
 
                 <div className='max-[600px]:mb-10'>
@@ -33,29 +32,22 @@ const Footer = () => {
                     <p>Help Desk</p>
                     <p>Sales</p>
                     <p>Become a Partner</p>
-                   
                 </div>
 
                 <div>
                     <h1 className='text-xl mb-3 font-bold '>Contact</h1>
                     <p>Mohammadpur, Dhaka-1207, Bangladesh <br /> +8801748521745</p>
-
                 </div>
 
             </div>
 
-
-
             <hr className='mt-5' />
-
-
 
             <div className=' mt-10'>
                 <p> &copy;2023 Skychef. All Rights Reserved</p>
-                
             </div>
 
-            
+
         </div>
     );
 };
