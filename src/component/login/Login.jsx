@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <div className='bg-white text-black lg:w-6/12 mx-auto rounded-lg h-[600px]'>
+        <div className=' text-black bg-white lg:w-6/12 mx-auto rounded-lg h-[600px]'>
             <h1 className='text-4xl font-bold pb-28 pt-10'>Login</h1>
             <form  >
                
@@ -21,7 +21,7 @@ const Login = () => {
                 <button className='btn text-xl mt-5 lg:mr-48 px-10 bg-blue-500'><input type="submit" value="Login" /></button>
             </form>
 
-            <p className=' text-left text-center  mt-5 '>Dont have an account?  <span className='text-blue-600'> <Link to='/register'>Register</Link></span></p>
+            <p className='  text-center  mt-5 '>Dont have an account?  <span className='text-blue-600'> <Link to='/register'>Register</Link></span></p>
 
 
 
