@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Login = () => {
-
+    const { loginUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
     const handleLogin = (event) => {
 
         event.preventDefault();
             const form = event.target;
             const email = form.email.value;
             const password = form.password.value;
+
+            loginUser(email, password)
+            .then(res =>{
+                setError('')
+                
+            })
+            .catch(er => setError(er.message))
 
          console.log(email,password);
 
@@ -30,7 +39,7 @@ const Login = () => {
                 <input className='border-2  p-3 rounded border-zinc-400 lg:w-[400px] mr-12 h-10' type="password" name="password" id="password" placeholder='please enter password' required />
 
                 <br />
-                <p className='text-red-500 text-left mt-2 ml-40'>Error</p>
+                <p className='text-red-500 text-left mt-2 ml-40'>{error}</p>
                 <button className='btn text-xl mt-5 lg:mr-48 px-10 bg-blue-500'><input type="submit" value="Login" /></button>
             </form>
 
