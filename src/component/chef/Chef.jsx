@@ -1,10 +1,11 @@
 import React from 'react';
 import './Chef.css';
+import { Link } from 'react-router-dom';
 
 const Chef = ({c}) => {
-    console.log(c)
+    
 
-    const {img, name,experience,numbers_of_recipes,likes} = c;
+    const {id,img, name,experience,numbers_of_recipes,likes} = c;
     return (
         <div className="card rounded-none w-96 bg-base-100 shadow-xl">
   <figure><img className=' h-80 w-full bg-green-950 ' src={img} alt="chef" /></figure>
@@ -14,7 +15,7 @@ const Chef = ({c}) => {
     <h4>Numbers of Recipes: {numbers_of_recipes}</h4>
     <h4>Likes: {likes}</h4>
     <div className="card-actions justify-center">
-      <button className="btn glass btn-wide">View Recipes</button>
+     <Link to={`/chef/${id}`}><button className="btn glass btn-wide">View Recipes</button></Link>
     </div>
   </div>
 </div>

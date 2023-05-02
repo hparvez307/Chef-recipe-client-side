@@ -12,3 +12,17 @@
     font-weight: 800;
    
 }
+.chef-title{
+    color: #c9ab75;
+}
+.popular-section{
+    background-color: #0f1d22;
+    height: 90vh;
+    font-family: 'Satisfy', cursive;
+    color: #c9ab75;
+}
+
+.featured-title{
+    font-family: 'Satisfy', cursive;
+    color: #c9ab75;
+}
