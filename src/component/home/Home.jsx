@@ -30,10 +30,11 @@ const Home = () => {
 
                 <div className='grid mt-16 lg:grid-cols-3 gap-14 justify-center items-center'>
 
-
+                
                     {
                         chef.map(c => <Chef key={c.id} c={c}></Chef>)
                     }
+
                 </div>
             </div>
 

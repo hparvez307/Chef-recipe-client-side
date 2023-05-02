@@ -28,7 +28,7 @@ const ChefDetails = () => {
             }
 
             <div className="card  lg:card-side  chefDetails-container p-16 bg-base-100 shadow-xl">
-                <figure><img src={img} className=' h-[500px]' alt="Album" /></figure>
+               <figure>  <img src={img} className=' h-[500px]' alt="Album" /></figure>
                 <div className="card-body text-orange-300 opacity-70 lg:w-8/12 mt-20">
                     <h1 className="lg:text-5xl  font-bold">Name: {name}</h1>
                     <h4 className="lg:text-xl"> Years of experience: {experience}</h4>
