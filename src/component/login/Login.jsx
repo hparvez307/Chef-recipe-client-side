@@ -88,7 +88,7 @@ const Login = () => {
 
 
 
-            <div className='flex flex-col gap-4 mt-8 items-center'>
+            <div className='flex flex-col gap-4 ml-8 mt-8 items-center'>
                 <button onClick={handleGithub} className="btn w-[350px] font-bold btn-outline">Login with Github </button>
                 <button onClick={handleGoogle} className="btn w-[350px] font-bold  btn-outline btn-primary">Login with google</button>
             </div>
