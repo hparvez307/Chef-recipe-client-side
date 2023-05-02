@@ -10,6 +10,7 @@ import AuthProvider from './authProvider/AuthProvider.jsx';
 import ChefDetails from './component/chefDetails/ChefDetails.jsx';
 import Register from './component/register/Register.jsx';
 import PrivateRoute from './component/privateRoute/PrivateRoute.jsx';
+import ErrorPage from './component/errorPage/ErrorPage.jsx';
 
 
 
@@ -39,6 +40,10 @@ const router =  createBrowserRouter([
       {
         path:'/register',
         element: <Register></Register>
+      },
+      {
+        path: '/*',
+        element: <ErrorPage></ErrorPage>
       }
     ]
   }

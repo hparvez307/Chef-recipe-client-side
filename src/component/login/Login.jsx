@@ -45,6 +45,10 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        if(!/(?=.{6,})/.test(password)){
+            setError('The password is less than 6 characters')
+            return;
+         }
             loginUser(email, password)
                 .then(res => {
                     setError('')

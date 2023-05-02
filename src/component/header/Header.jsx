@@ -3,6 +3,7 @@ import './Header.css';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 
+
 const Header = () => {
     const {logOut, user} = useContext(AuthContext);
 
@@ -20,6 +21,11 @@ const Header = () => {
                 <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} ><span className='px-3 font-bold text-2xl'>Home</span></NavLink>
 
                 <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""} ><span className='px-3 font-bold text-2xl'>Blog</span></NavLink>
+
+                {
+                    user ? <img className='user-img'
+                     src="../../../public/1205336100_dddd(1)(1).jpg.5ca38cc0d0b683b068247cf310965e27.jpg" alt="" /> : ''
+                }
 
              {
                user ? <button onClick={handleLogout} className='font-bold text-2xl'>Logout</button>
