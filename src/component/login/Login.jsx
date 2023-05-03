@@ -18,6 +18,7 @@ const Login = () => {
         google()
             .then(res => {
                 console.log(res.user);
+                navigate(from, { replace: true });
                 setError('');
 
             })
@@ -31,6 +32,7 @@ const Login = () => {
         github()
             .then(res => {
                 console.log(res.user);
+                navigate(from, { replace: true });
                 setError('');
             })
             .catch(er => {
