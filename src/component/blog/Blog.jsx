@@ -7,20 +7,22 @@ const Blog = () => {
         <div>
             <h1 className='text-6xl mb-10  font-bold'>Blog</h1>
 
-            
 
-                 <div>
-    <ReactToPdf targetRef={ref} filename="skychef.pdf"  x={.5} y={0} >
-        {({toPdf}) => (
-            <button className='btn btn-info mb-8' onClick={toPdf}>Generate pdf</button>
-        )}
-        
-    </ReactToPdf>
-    
-    
-    
-</div>
+            {/*react pdf generate */}
+            <div>
+                <ReactToPdf targetRef={ref} filename="skychef.pdf" x={.5} y={0} >
+                    {({ toPdf }) => (
+                        <button className='btn btn-info  mb-8' onClick={toPdf}>Generate pdf</button>
+                    )}
 
+                </ReactToPdf>
+
+
+
+            </div>
+
+
+            {/* Question section */}
             <div ref={ref} >
                 {/* question 1 */}
                 <div className='ans p-5 rounded'>
