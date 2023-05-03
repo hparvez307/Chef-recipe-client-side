@@ -58,7 +58,7 @@ const AuthProvider = ({ children }) => {
 
     // laod data for all children
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://skychef-server-hparvez307.vercel.app/')
             .then(res => res.json())
             .then(data => setChef(data))
     }, [])

@@ -29,7 +29,7 @@ const Header = () => {
 
                 {
                     user ? <img title={user?.email} className='user-img'
-                        src="../../../public/1205336100_dddd(1)(1).jpg.5ca38cc0d0b683b068247cf310965e27.jpg" alt="" /> : ''
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" /> : ''
                 }
 
 

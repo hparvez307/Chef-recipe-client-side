@@ -2,7 +2,7 @@
 
 * There is a navbar in the top of this website. And people can easily navigate the pages and feature through navbar. 
 
-* There is a  registration and login page where people can sign up and sign in with email and password, github account, and google account.  The recipe details page is protected user cant see the recipe details page without login.
+* There is a  registration and login page where people can sign up and sign in with email and password, github account, and google account.  The recipe details page is protected user cant see the chef & recipe details without login.
 
 * In the homepage of  this website we put many section like slider, chef, popular item and, footer etc. so that people can know and learn there favorite food recipe of world class master-chef.
 
@@ -10,4 +10,4 @@
 
 * Also we have a blogs page where people can see and read our recent popular blog and learn how to cook the chef best recipes.
 
-* Here is our Live website Link: https://bespoke-horse-5f4dc5.netlify.app/
+* Here is our Live website Link: https://skychef-assignment-10-project.web.app/
