@@ -6,7 +6,7 @@ const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
     let [color, setColor] = useState("#ffffff");
-    console.log(user)
+   
 
     if (loading) {
         return <ClipLoader

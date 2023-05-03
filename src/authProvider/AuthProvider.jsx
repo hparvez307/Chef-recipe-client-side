@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [chef, setChef] = useState([]);
     const [user, setUser] = useState(null);
-    console.log(user);
+    
 
     // sign in with google
     const google = () => {

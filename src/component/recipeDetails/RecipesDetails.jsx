@@ -19,7 +19,7 @@ const RecipesDetails = ({ recipe }) => {
 
                     <h1 className="lg:text-4xl text-orange-300 font-bold">{recipe_name}</h1>
                     <h4 className="lg:text-xl text-orange-200 mb-6">Ratings: {rating}</h4>
-                    <h5><span className='text-xl text-orange-200 '>Ingredients:</span>  <br />{ingredients.map(i => <ol> <i>{i}</i> </ol>)}</h5>
+                    <h5><span className='text-xl text-orange-200 '>Ingredients:</span>  <br />{ingredients.map((i, index) => <ol key={index+1}> <i>{i}</i> </ol>)}</h5>
 
                     <p className='mb-10 mt-5'>
                         <span className='text-xl text-orange-200 '>Cooking Method:</span> <br />

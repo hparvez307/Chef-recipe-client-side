@@ -1,11 +1,27 @@
 import React from 'react';
+import ReactToPdf from 'react-to-pdf'
 import './Blog.css'
 const Blog = () => {
+    const ref = React.createRef();
     return (
         <div>
             <h1 className='text-6xl mb-10  font-bold'>Blog</h1>
 
-            <div >
+            
+
+                 <div>
+    <ReactToPdf targetRef={ref} filename="skychef.pdf"  x={.5} y={0} >
+        {({toPdf}) => (
+            <button className='btn btn-info mb-8' onClick={toPdf}>Generate pdf</button>
+        )}
+        
+    </ReactToPdf>
+    
+    
+    
+</div>
+
+            <div ref={ref} >
                 {/* question 1 */}
                 <div className='ans p-5 rounded'>
                     <h1 className='text-3xl text-bold text-orange-300 my-5'>Differences between uncontrolled and controlled components</h1>

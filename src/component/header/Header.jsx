@@ -8,6 +8,7 @@ const Header = () => {
 
     const { logOut, user } = useContext(AuthContext);
 
+   
     const handleLogout = () => {
         logOut()
             .then()
@@ -27,7 +28,7 @@ const Header = () => {
 
 
                 {
-                    user ? <img className='user-img'
+                    user ? <img title={user?.email} className='user-img'
                         src="../../../public/1205336100_dddd(1)(1).jpg.5ca38cc0d0b683b068247cf310965e27.jpg" alt="" /> : ''
                 }
 
